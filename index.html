@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- This is bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+
+    <!-- This is my CSS file -->
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> -->
+
+    <!-- This is jquery that is for bootstarop JS necessary  -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+
+    <!-- This is bootstrap js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+
+    <!-- This is the script tag for angular js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <title>Angular Form Stuff</title>
+</head>
+
+<body ng-controller="MainCtrl as main">
+
+
+    <form class="" ng-submit="main.getStarWars()">
+        <input type="text" placeholder="Name" ng-model="main.myData.name">
+    </form>
+    <div>
+
+        <h1>Name: {{ main.myData.name}}</h1>
+        <h1>Hair Color: {{ main.myData.hair_color }}</h1>
+        <h1>Birth Year: {{ main.myData.birth_year}}</h1>
+        <h1>Height: {{ main.myData.height}}</h1>
+        <h1>Species: {{ main.myData.species}}</h1>
+    </div>
+
+    {{ main.greeting }}
+
+    <script type="text/javascript" src="myScripts.js">
+    </script>
+</body>
+
+</html>
