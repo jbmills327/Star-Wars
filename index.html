@@ -25,17 +25,59 @@
 <body ng-controller="MainCtrl as main">
 
 
-    <form class="" ng-submit="main.getStarWars()">
-        <input type="text" placeholder="Name" ng-model="main.myData.name">
+    <form class="" ng-submit="main.getStarWarsStuff()">
+        <input type="text" placeholder="Type" ng-model="main.type">
+        <input type="text" placeholder="Name" ng-model="main.name">
+        <input type="submit" name="name" value="Submit">
+    </form>
+
+    <!-- This is the div to display the Star Wars Characters -->
+    <div ng-repeat="items in main.myStarWarsPeople">
+        <h2>Name: {{ items.name }} </h2>
+        <h2>Weight: {{ items.weight }}</h2>
+        <h2> Eye Color: {{ items.eyes }}</h2>
+        <h2> Hair Color: {{ items.hair }}</h2>
+        <h2>D.O.B{{ items.dob }}</h2>
+        <h2>Gender: {{ items.gender }}</h2>
+    </div>
+
+    <!-- This is the div to display the Star Wars Starships -->
+    <div ng-repeat="ships in main.myStarWarsStarships">
+        <h2>Name: {{  ships.name }}</h2>
+        <h2>Model: {{  ships.model }}</h2>
+        <h2>Manufacturer: {{  ships.manufacturer }}</h2>
+        <h2>Cost: {{  ships.cost }}</h2>
+        <h2>Length: {{  ships.length }}</h2>
+        <h2>Atmospheric Speed: {{  ships.speed }}</h2>
+        <h2>Number of Crew: {{  ships.crew }}</h2>
+        <h2>Max Number of Passengers: {{  ships.passengers }}</h2>
+        <h2>Cargo Capacity: {{  ships.cargoCapacity }}</h2>
+        <h2>Consumables: {{  ships.consumables }}</h2>
+        <h2>Hyper Drive Rating: {{  ships.hyperdriveRating }}</h2>
+        <h2>MGLT: {{  ships.mglt }}</h2>
+        <h2>Starship Class: {{  ships.starshipClass }}</h2>
+    </div>
+
+    <div ng-repeat="movies in main.myStarWarsFilms">
+        <h2>Title: {{ movies.title }} </h2>
+        <h2>Episode Number: {{ movies.episode }}</h2>
+        <h2>Directed By: {{ movies.director }}</h2>
+        <h2>Produced By: {{ movies.producer }}</h2>
+        <h2>Release Date: {{ movies.releaseDate }}</h2>
+        <h2>Opening Crawl: {{ items.crawl }}</h2>
+    </div>
+
+    <!-- <form class="" ng-submit="main.getStarWarsFilms()">
+        <input type="text" placeholder="Name" ng-model="main.myDataFilms.title">
     </form>
     <div>
 
-        <h1>Name: {{ main.myData.name}}</h1>
-        <h1>Hair Color: {{ main.myData.hair_color }}</h1>
-        <h1>Birth Year: {{ main.myData.birth_year}}</h1>
-        <h1>Height: {{ main.myData.height}}</h1>
-        <h1>Species: {{ main.myData.species}}</h1>
-    </div>
+        <h1>Title: {{ main.myDataFilms.title}}</h1>
+        <h1>Episode: {{ main.myDataFilms.episode_id }}</h1>
+        <h1>Opening Crawl: {{ main.myDataFilms.opening_crawl }}</h1>
+        <h1>Director: {{ main.myDataFilms.director }}</h1>
+        <h1>Release Date: {{ main.myDataFilms.release_date }}</h1>
+    </div> -->
 
     {{ main.greeting }}
 
