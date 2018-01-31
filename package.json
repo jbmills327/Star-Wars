@@ -1,0 +1,20 @@
+{
+  "name": "star-wars",
+  "version": "1.0.0",
+  "description": "My Wookiepedia",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbmills327/Star-Wars.git"
+  },
+  "author": "Justin Mills",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbmills327/Star-Wars/issues"
+  },
+  "homepage": "https://github.com/jbmills327/Star-Wars#readme"
+}
